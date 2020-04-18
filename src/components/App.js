@@ -1,10 +1,23 @@
 import React from 'react'
+import Search from './Search'
+import {searchIt} from '../services/search'
 
-export default function App() {
-    return (
-        <div>
-            <h1>Welcome</h1>
-                <p>Hello</p>
-        </div>
-    )
+
+class App extends Component {
+    constructor(){
+        super();
+        this.state = {
+            searchTerm: '',
+
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
+export default App
