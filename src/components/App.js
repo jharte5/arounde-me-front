@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Search from "./Search";
-import { searchIt } from "../services/search";
+// import { searchIt } from "../services/search";
 import Auto from "./Auto";
+
 
 class App extends Component {
     constructor() {
@@ -21,13 +22,18 @@ class App extends Component {
         {
         method: "GET",
         headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "*",
             "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-            "x-rapidapi-key": "eac3225223msh551076a7ef7b5b0p18786djsn511b4fa87136",
+            "x-rapidapi-key": "eac3225223msh551076a7ef7b5b0p18786djsn511b4fa87136"
         },
         }
     )
         .then((response) => {
-        console.log(response);
+            return response.json();
+        })
+        .then((data)=> {
+            console.log(data)
         })
         .catch((err) => {
         console.log(err);
