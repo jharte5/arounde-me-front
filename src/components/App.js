@@ -46,8 +46,34 @@ class App extends Component {
         });
     };
 
+    getAttraction = () =>{
+        fetch(
+            "https://tripadvisor1.p.rapidapi.com/attractions/list-by-latlng?lunit=km&currency=USD&limit=30&distance=5&lang=en_US&longitude=100.87808&latitude=12.91285",
+        {
+            "method": "GET",
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+                "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+                "x-rapidapi-key": "eac3225223msh551076a7ef7b5b0p18786djsn511b4fa87136"
+            }
+})
+.then(response => {
+	return response.json();
+})
+.then((data) => {
+    this.setState({
+        attraction:[]
+    })
+})
+.catch(err => {
+	console.log(err);
+});
+    }
+
     componentDidMount(){
         // this.getFood()
+        // this.getAttraction()
     }
 
     render() {
