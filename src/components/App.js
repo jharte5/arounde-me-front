@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Search from "./Search";
 // import { searchIt } from "../services/search";
 import Auto from "./Auto";
+import Food from './Food';
+import Attractions from "./Attractions";
 
 
 class App extends Component {
@@ -9,13 +11,15 @@ class App extends Component {
     super();
     this.state = {
         searchTerm: "",
-    };
     }
+    }
+
     handleChange = (event) => {
     this.setState({ searchTerm: event.target.value }, () => {
         console.log(this.state.searchTerm);
     });
     };
+
     getFood = () => {
     fetch(
         "https://tripadvisor1.p.rapidapi.com/restaurants/list-by-latlng?limit=30&currency=USD&distance=2&lunit=km&lang=en_US&latitude=12.91285&longitude=100.87808",
@@ -33,7 +37,9 @@ class App extends Component {
             return response.json();
         })
         .then((data)=> {
-            console.log(data)
+            this.setState({
+                food: []
+            })
         })
         .catch((err) => {
         console.log(err);
@@ -41,21 +47,30 @@ class App extends Component {
     };
 
     componentDidMount(){
-        this.getFood()
+        // this.getFood()
     }
+
     render() {
     return (
-        <div
-        style={{
-            marginTop: "100px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-        }}
-        >
-        <Search />
-        <Auto />
+        <div>
+            <div>
+            <Search />
+                <div
+                style={{
+                    marginTop: "100px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "row",
+                    padding:"35px"
+                }}>
+                <Food />
+
+                <Auto />
+
+                <Attractions />
+                </div>
+            </div>
         </div>
     );
     }

@@ -4,7 +4,8 @@ import AutoItems from './AutoItems'
 export default function Auto(props) {
     return (
         <div>
-            <AutoItems/>
+            <AutoItems
+            />
         </div>
     )
 }

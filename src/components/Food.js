@@ -1,20 +1,12 @@
 import React from 'react'
-import {searchIt} from '../services/search'
+import FoodItems from './FoodItems'
 
 
 
 export default function Food(props) {
-
-
     return (
         <div>
-            {props.blogs.filter(searchIt(props.searchTerm)).map((blog,i)=>{
-                return(
-                    <div>
-
-                    </div>
-                )
-            })}
+            <FoodItems />
         </div>
     )
 }

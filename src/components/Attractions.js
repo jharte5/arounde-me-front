@@ -1,9 +1,10 @@
 import React from 'react'
+import AttractionItems from './AttractionItems'
 
 export default function Attractions() {
     return (
-        <div>
-            
+        <div>   
+            <AttractionItems />
         </div>
     )
 }
