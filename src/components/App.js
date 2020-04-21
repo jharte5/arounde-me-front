@@ -11,6 +11,9 @@ class App extends Component {
     super();
     this.state = {
         searchTerm: "",
+        food:[],
+        attraction:[],
+        auto:[],
     }
     }
 
@@ -19,6 +22,9 @@ class App extends Component {
         console.log(this.state.searchTerm);
     });
     };
+    getAuto = () => {
+        
+    }
 
     getFood = () => {
     fetch(
@@ -38,7 +44,7 @@ class App extends Component {
         })
         .then((data)=> {
             this.setState({
-                food: []
+                food: data.data
             })
         })
         .catch((err) => {
@@ -88,11 +94,10 @@ class App extends Component {
                     justifyContent: "center",
                     alignItems: "center",
                     flexDirection: "row",
-                    padding:"35px"
                 }}>
-                <Food />
+                <Food style={{padding:"350px"}} food= {this.state.food}/>
 
-                <Auto />
+                <Auto style={{paddingRight:"350px"}}/>
 
                 <Attractions />
                 </div>

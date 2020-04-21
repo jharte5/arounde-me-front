@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function AutoItems() {
+export default function AutoItems({onDelete, onUpdate, auto:{service, _id:id}}) {
     return (
-        <div>
-            <h1>auto</h1>
-                <p>this is auto items</p>
+        <div className="ui card" style={{width:"75%", padding:"20px"}}>
+            <div className="content">
+                <div className="header">{service}</div>
+            </div>
         </div>
     )
 }

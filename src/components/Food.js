@@ -6,7 +6,7 @@ import FoodItems from './FoodItems'
 export default function Food(props) {
     return (
         <div>
-            <FoodItems />
+            <FoodItems food = {props.food}/>
         </div>
     )
 }
