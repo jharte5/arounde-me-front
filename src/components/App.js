@@ -4,6 +4,7 @@ import Search from "./Search";
 import Auto from "./Auto";
 import Food from './Food';
 import Attractions from "./Attractions";
+import axios from 'axios'
 
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
         searchTerm: "",
         food:[],
         attraction:[],
-        auto:[],
+        autos:[],
     }
     }
 
@@ -23,7 +24,10 @@ class App extends Component {
     });
     };
     getAuto = () => {
-        
+        const url = '/autos';
+        axios.get(url).then((autos) =>{
+            this.setState({autos: [...autos.data]})
+        })
     }
 
     getFood = () => {
@@ -80,13 +84,15 @@ class App extends Component {
     componentDidMount(){
         // this.getFood()
         // this.getAttraction()
+        this.getAuto()
     }
 
     render() {
+        console.log(this.state.auto)
     return (
         <div>
             <div>
-            <Search />
+            <Search searchTerm={this.state.searchTerm} handleChange={this.handleChange}/>
                 <div
                 style={{
                     marginTop: "100px",
@@ -97,7 +103,7 @@ class App extends Component {
                 }}>
                 <Food style={{padding:"350px"}} food= {this.state.food}/>
 
-                <Auto style={{paddingRight:"350px"}}/>
+                <Auto style={{paddingRight:"350px"}} autos= {this.state.autos} searchTerm={this.state.searchTerm}/>
 
                 <Attractions />
                 </div>
