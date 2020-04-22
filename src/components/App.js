@@ -32,7 +32,7 @@ class App extends Component {
 
     getFood = () => {
     fetch(
-        "https://tripadvisor1.p.rapidapi.com/restaurants/list-by-latlng?limit=30&currency=USD&distance=2&lunit=km&lang=en_US&latitude=12.91285&longitude=100.87808",
+        "https://tripadvisor1.p.rapidapi.com/restaurants/list?restaurant_tagcategory_standalone=60763&lunit=mi&restaurant_tagcategory=10591&limit=5&prices_restaurants=10953%252C10955&restaurant_mealtype=10598%252C10599&currency=USD&lang=en_US&location_id=60763",
         {
         method: "GET",
         headers: {
@@ -44,6 +44,7 @@ class App extends Component {
         }
     )
         .then((response) => {
+            console.log(this.state)
             return response.json();
         })
         .then((data)=> {
@@ -82,7 +83,7 @@ class App extends Component {
     }
 
     componentDidMount(){
-        // this.getFood()
+        this.getFood()
         // this.getAttraction()
         this.getAuto()
     }
