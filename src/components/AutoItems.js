@@ -3,7 +3,7 @@ import Button from './Button'
 
 export default function AutoItems({onDelete, onUpdate, auto:{service, name, city, price, address, phone, website, _id:id}}) {
     return (
-        <div className="ui card" style={{width:"75%", padding:"20px"}}>
+        <div className="ui card" style={{width:"22em", height: "25em", padding:"20px"}}>
             <div className="content">
                 <div className="header">{service}</div>
                 <hr/>
@@ -14,6 +14,15 @@ export default function AutoItems({onDelete, onUpdate, auto:{service, name, city
                 <div className="meta">{phone}</div>
                 <hr/>
                 <div className="meta">{website}</div>
+                <Button
+                className="ui primary button"
+                style={{margin:'10px 15px'}}
+                onClick={() => {
+                    return onDelete(id);
+                }}
+                >
+                    Delete
+                </Button>
             </div>
         </div>
     )

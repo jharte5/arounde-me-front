@@ -2,15 +2,27 @@ import React from 'react'
 
 export default function AttractionItems(props) {
     return (
-                    <div>
-                        {console.log(props.attraction)}
-                        <h1>{props.attraction.name}</h1>
-                        <p>{props.attraction.ranking}</p>
-                        <p>{props.attraction.ranking_geo}</p>
-                        <p>{props.attraction.price}</p>
-                        <p>{props.attraction.address}</p>
-                        <p>{props.attraction.phone}</p>
-                        <p>{props.attraction.website}</p>
-                    </div>
+        <div className="ui card" style={{width:"22em", height: "25em", padding:"20px"}}>
+            <div className="content">
+                {props.attraction.map((attraction)=>{
+                    return(
+                        <div>
+                            <div className="header">{props.attraction.name}</div>
+                            <hr/>
+                            <div className="meta">{props.attraction.ranking}</div>
+                            <div className="meta">{props.attraction.ranking_geo}</div>
+                            <div className="meta">{props.attraction.price}</div>
+                            <div className="meta">{props.attraction.address}</div>
+                            <div className="meta">{props.attraction.phone}</div>
+                            <hr/>
+                            <div className="meta">{props.attraction.website}</div>
+                        </div>
+                    )
+                }
+                )}
+            </div>
+        </div>
     )
 }
+{console.log(props.attraction)}
+

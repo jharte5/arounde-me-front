@@ -8,7 +8,7 @@ export default function Search(props) {
                     <input
                     onChange={props.handleChange}
                     type="text"
-                    placeholder="Search.. "
+                    placeholder="Type Services Here... "
                     value={props.searchTerm}
                     style={{
                         alignItems:"center",

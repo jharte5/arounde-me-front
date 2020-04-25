@@ -4,7 +4,6 @@ export default function FoodItems(props) {
     return (
         <div>
             {props.food.map((food)=> {
-               
                 return (
                     <div>
                         <h1>{food.name}</h1>

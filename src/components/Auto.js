@@ -4,7 +4,14 @@ import {searchIt} from '../services/search'
 
 export default function Auto(props) {
     return (
-        <div>
+        <div style={{
+          
+            width:"30em",
+            display: "flex",
+            flexWrap: "wrap",
+            width: "75em"
+            
+        }}>
             {props.autos.filter(searchIt(props.searchTerm)).map((auto, i)=> {
                 return(
                     <AutoItems
