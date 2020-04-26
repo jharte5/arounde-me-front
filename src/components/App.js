@@ -11,7 +11,7 @@ class App extends Component {
     constructor() {
     super();
     this.state = {
-        searchTerm: "Type Services here ...",
+        searchTerm: "Find Services Here",
         food:[],
         attraction:[],
         autos:[],
@@ -84,7 +84,7 @@ class App extends Component {
     }
 
     componentDidMount(){
-        this.getFood()
+        // this.getFood()
         this.getAttraction()
         this.getAuto()
     }
@@ -94,7 +94,7 @@ class App extends Component {
     return (
         <div>
             <div>
-            <Search searchTerm={this.state.searchTerm} handleChange={this.handleChange}/>
+            
                 <div
                 style={{
                     marginTop: "100px",
@@ -103,11 +103,23 @@ class App extends Component {
                     alignItems: "center",
                     flexDirection: "row",
                 }}>
-                <Food style={{padding:"350px"}} food= {this.state.food}/>
-
-                <Auto style={{paddingRight:"350px"}} autos= {this.state.autos} searchTerm={this.state.searchTerm}/>
-
-                <Attractions attraction={this.state.attraction} searchTerm={this.state.searchTerm}/>
+                <Food 
+                style={{padding:"350px"}} 
+                food= {this.state.food}
+                />
+                <Search 
+                searchTerm={this.state.searchTerm} 
+                handleChange={this.handleChange}
+                />
+                <Auto 
+                style={{paddingRight:"350px"}} 
+                autos= {this.state.autos} 
+                searchTerm={this.state.searchTerm}
+                />
+                <Attractions 
+                attraction={this.state.attraction} 
+                searchTerm={this.state.searchTerm}
+                />
                 </div>
             </div>
         </div>
