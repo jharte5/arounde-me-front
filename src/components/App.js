@@ -85,7 +85,7 @@ class App extends Component {
 
     componentDidMount(){
         // this.getFood()
-        this.getAttraction()
+        // this.getAttraction()
         this.getAuto()
     }
 

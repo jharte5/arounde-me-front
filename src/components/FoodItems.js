@@ -5,15 +5,17 @@ export default function FoodItems(props) {
     return (
         <div>
         
-        {props.food && <div>
-            <img style={{width:500,height:300}} src={props.food.photo.images.medium.url}/>
-            <h1>{props.food.name}</h1>
-            <p>{props.food.ranking}</p>
-            <p>{props.food.ranking_geo}</p>
-            <p>{props.food.price}</p>
-            <p>{props.food.address}</p>
-            <p>{props.food.phone}</p>
-            <p>{props.food.website}</p> 
+        {props.food && <div className="ui card">
+            <img className="header" style={{width:500,height:300}} src={props.food.photo.images.medium.url}/>
+            <div className="header">{props.food.name}</div>
+            <hr/>
+            <div className="meta">{props.food.ranking}</div>
+            <div className="meta">{props.food.ranking_geo}</div>
+            <div className="meta">{props.food.price}</div>
+            <div className="meta">{props.food.address}</div>
+            <div className="meta">{props.food.phone}</div>
+            <hr/>
+            <div className="meta">{props.food.website}</div> 
             </div>
         }
         </div>
