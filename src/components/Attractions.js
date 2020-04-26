@@ -7,8 +7,9 @@ export default function Attractions(props) {
     // const filtered = props.attraction.filter((attraction)=> this.props.searchTerm === attraction )
     return (
         <div>   
-            {props.attraction.map((attraction, i)=> {
+            {props. attraction && props.attraction.map((attraction, i)=> {
                 return(
+                    
                     <AttractionItems 
                     attraction = {attraction}
                     key={attraction.location_id}

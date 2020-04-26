@@ -4,8 +4,8 @@ export default function AttractionItems(props) {
     return (
         <div className="ui card" style={{width:"22em", height: "25em", padding:"20px"}}>
             <div className="content">
-                {props.attraction.map((attraction)=>{
-                    return(
+             
+                
                         <div>
                             <div className="header">{props.attraction.name}</div>
                             <hr/>
@@ -17,12 +17,12 @@ export default function AttractionItems(props) {
                             <hr/>
                             <div className="meta">{props.attraction.website}</div>
                         </div>
-                    )
-                }
-                )}
+                    
+                
+             
             </div>
         </div>
     )
 }
-{console.log(props.attraction)}
+
 

@@ -11,7 +11,7 @@ class App extends Component {
     constructor() {
     super();
     this.state = {
-        searchTerm: "",
+        searchTerm: "Type Services here ...",
         food:[],
         attraction:[],
         autos:[],
@@ -48,6 +48,7 @@ class App extends Component {
             return response.json();
         })
         .then((data)=> {
+            console.log('API',data)
             this.setState({
                 food: data.data
             })
@@ -83,13 +84,13 @@ class App extends Component {
     }
 
     componentDidMount(){
-        // this.getFood()
-        // this.getAttraction()
+        this.getFood()
+        this.getAttraction()
         this.getAuto()
     }
 
     render() {
-        console.log(this.state.auto)
+        console.log('Food', this.state.food)
     return (
         <div>
             <div>

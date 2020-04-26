@@ -3,6 +3,7 @@ import AutoItems from './AutoItems'
 import {searchIt} from '../services/search'
 
 export default function Auto(props) {
+    let terms = ['auto', 'body', 'repair','car','wash', 'tire','gas']
     return (
         <div style={{
           
@@ -12,6 +13,7 @@ export default function Auto(props) {
             width: "75em"
             
         }}>
+            
             {props.autos.filter(searchIt(props.searchTerm)).map((auto, i)=> {
                 return(
                     <AutoItems
