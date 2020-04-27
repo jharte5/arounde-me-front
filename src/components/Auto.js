@@ -1,8 +1,9 @@
 import React from 'react'
 import AutoItems from './AutoItems'
 import {searchIt} from '../services/search'
+import PropTypes from 'prop-types'
 
-export default function Auto(props) {
+const Auto = (props) => {
     let terms = ['auto', 'body', 'repair','car','wash', 'tire','gas']
     return (
         <div style={{
@@ -27,3 +28,18 @@ export default function Auto(props) {
         </div>
     )
 }
+Auto.propTypes = {
+    onUpdate: PropTypes.func,
+    autos: PropTypes.arrayOf(
+        PropTypes.shape({
+            service: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            city: PropTypes.string.isRequired,
+            address: PropTypes.string.isRequired,
+            phone: PropTypes.string.isRequired,
+            website: PropTypes.string.isRequired,
+            price: PropTypes.string.isRequired
+        })
+    )
+}
+export default Auto

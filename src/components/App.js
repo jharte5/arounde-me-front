@@ -93,9 +93,10 @@ class App extends Component {
     render() {
         console.log('Food', this.state.food)
     return (
-        <div>
-            <div>
+        <div style={{
             
+        }}>
+            <div>
                 <div
                 style={{
                     marginTop: "100px",
@@ -119,7 +120,6 @@ class App extends Component {
                 />
                 <Attractions 
                 attraction={this.state.attraction} 
-                searchTerm={this.state.searchTerm}
                 />
                 </div>
             </div>
