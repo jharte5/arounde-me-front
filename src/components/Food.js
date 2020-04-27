@@ -1,7 +1,8 @@
 import React from 'react'
 import FoodItems from './FoodItems'
+import PropTypes from 'prop-types'
 
-export default function Food(props) {
+const Food = (props) => {
     console.log(props.food)
         return (
         <div>
@@ -15,3 +16,19 @@ export default function Food(props) {
         </div>
     )
 }
+Food.propTypes = {
+    onUpdate: PropTypes.func,
+    autos: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            ranking: PropTypes.string.isRequired,
+            ranking_geo: PropTypes.string.isRequired,
+            address: PropTypes.string.isRequired,
+            phone: PropTypes.string.isRequired,
+            website: PropTypes.string.isRequired,
+            price: PropTypes.string.isRequired
+        })
+    )
+}
+
+export default Food
