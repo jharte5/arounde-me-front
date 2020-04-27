@@ -5,7 +5,7 @@ export default function FoodItems(props) {
     return (
         <div>
         
-        {props.food && <div className="ui card">
+        {props.food && <div className="ui card" style={{width:'500px'}}>
             <img className="header" style={{width:500,height:300}} src={props.food.photo.images.medium.url}/>
             <div className="header">{props.food.name}</div>
             <hr/>

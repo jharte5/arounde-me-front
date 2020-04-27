@@ -60,7 +60,8 @@ class App extends Component {
 
     getAttraction = () =>{
         fetch(
-            "https://tripadvisor1.p.rapidapi.com/attractions/list?lang=en_US&currency=USD&sort=recommended&lunit=km&limit=5&bookable_first=false&subcategory=36&location_id=60763",
+            // "https://tripadvisor1.p.rapidapi.com/attractions/list?lang=en_US&currency=USD&sort=recommended&lunit=km&limit=5&bookable_first=false&subcategory=36&location_id=60763",
+            "https://tripadvisor1.p.rapidapi.com/attractions/list?lang=en_US&currency=USD&sort=recommended&lunit=mi&limit=15&location_id=60763",
         {
             "method": "GET",
             "headers": {
@@ -84,8 +85,8 @@ class App extends Component {
     }
 
     componentDidMount(){
-        // this.getFood()
-        // this.getAttraction()
+        this.getFood()
+        this.getAttraction()
         this.getAuto()
     }
 
