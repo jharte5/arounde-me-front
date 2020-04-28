@@ -3,7 +3,7 @@ import AttractionItems from './AttractionItems'
 import PropTypes from 'prop-types'
 
 const Attractions = (props)=> {
-    const number = Math.floor(Math.random() * 15);
+    const number = Math.floor(Math.random() * 13);
     return (
         <div>
             {props.attraction && <AttractionItems attraction = {props.attraction[number]} />}

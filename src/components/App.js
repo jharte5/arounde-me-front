@@ -93,31 +93,58 @@ class App extends Component {
     render() {
         console.log('Food', this.state.food)
     return (
-        <div style={{
-            
-        }}>
+        <div>
             <div>
+            <div style = {{
+                backgroundColor:'green'
+            }}>
+            <h1>Welcome To New York.</h1>
+                <p>Random Food Services on the Left</p>
+                <p>New York's Hottest Attractions on the Right</p>
+                <p>Automotive Services in the middle</p>
+            </div>
                 <div
                 style={{
-                    marginTop: "100px",
+                    backgroundColor:'gray',
+                    color:'red',
+                    height:'100vh',
+                    width:'100vw',
+                    // marginTop: "100px",
+                    // marginBottom:"100px",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     flexDirection: "row",
+                    fontFamily:'Lucida Console, Monaco, monospace',
+                    fontStyle:'oblique',
+                    fontVariant:'small-caps',
+                    textTransform:'capitalize'
                 }}>
                 <Food 
-                style={{padding:"350px"}} 
+                style={{}} 
                 food= {this.state.food}
                 />
+                <div style={{
+                    color:'red',
+                    display:'flex',
+                    flexDirection:'column'
+                }}>
                 <Search 
                 searchTerm={this.state.searchTerm} 
                 handleChange={this.handleChange}
                 />
                 <Auto 
-                style={{paddingRight:"350px"}} 
+                style={{
+                    display:'flex',
+                    flexDirection:"column",
+                    flexWrap:"wrap",
+                    marginTop:"100px",
+                    marginBottom:"100px"
+                }} 
                 autos= {this.state.autos} 
                 searchTerm={this.state.searchTerm}
                 />
+                </div>
                 <Attractions 
                 attraction={this.state.attraction} 
                 />
@@ -128,3 +155,7 @@ class App extends Component {
     }
 }
 export default App;
+
+// style={{
+//     backgroundColor:"green"
+// }}

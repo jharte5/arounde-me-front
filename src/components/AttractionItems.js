@@ -13,7 +13,7 @@ export default function AttractionItems(props) {
                     <div className="meta">{props.attraction.address}</div>
                     <div className="meta">{props.attraction.phone}</div>
                     <hr/>
-                    <div className="meta">{props.attraction.website}</div>
+                        <div className="meta">{props.attraction.website}</div>
                 </div>
             </div>
             }
