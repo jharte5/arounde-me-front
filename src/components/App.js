@@ -96,7 +96,12 @@ class App extends Component {
         <div>
             <div>
             <div style = {{
-                backgroundColor:'green'
+                backgroundColor:'purple',
+                backgroundImage: "url('https://media0.giphy.com/media/4wfJrjhewm9eE/source.gif')",
+                backgroundRepeat:"no-repeat",
+                backgroundSize:"100vw 20vh",
+                color:"white",
+                textAlign: "center"
             }}>
             <h1>Welcome To New York.</h1>
                 <h3>We Have Everything</h3>
