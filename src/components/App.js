@@ -99,13 +99,17 @@ class App extends Component {
                 backgroundColor:'green'
             }}>
             <h1>Welcome To New York.</h1>
-                <p>Random Food Services on the Left</p>
-                <p>New York's Hottest Attractions on the Right</p>
-                <p>Automotive Services in the middle</p>
+                <h3>We Have Everything</h3>
+                <p>From random Food Services,</p>
+                <p>New York's Hottest Attractions,</p>
+                <p> and Automotive Services </p>
             </div>
                 <div
                 style={{
-                    backgroundColor:'gray',
+                    backgroundColor: "lightBlue",
+                    backgroundImage: "url('https://cdn.travelpulse.com/images/99999999-9999-9999-9999-999999999999/78eeaa7d-dfd1-2d2f-defc-f8acd9253b89/630x355.jpg')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100vw 100vh",
                     color:'red',
                     height:'100vh',
                     width:'100vw',
