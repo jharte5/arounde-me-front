@@ -16,12 +16,12 @@ export default function AutoItems({onDelete, onUpdate, auto:{service, name, city
                 <div className="meta">{website}</div>
                 <Button
                 className="ui primary button"
-                style={{margin:'10px 15px'}}
+                style={{margin:'10px 15px', backgroundColor:'red'}}
                 onClick={() => {
                     return onDelete(id);
                 }}
                 >
-                    Delete
+                    Don't Touch It!
                 </Button>
             </div>
         </div>
